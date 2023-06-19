@@ -1,16 +1,21 @@
 const obj = {
   a: 1,
   b: 2,
-  c: [1, 2, 3, 4],
-  d: {
-    val() {
-      console.log('value in d');
-    },
-    prop: 'property',
-  },
+  c: ['O', 'B', 'J'],
+  d: { value: 'Val' },
 };
 
-const { a /** a:a */, b } = obj;
+//Binding Pattern
+// const { a,b,c,d } = obj;//const a = obj.a
+// console.log(a);
+// console.log(c);
 
-console.log(a);
+const { a: a1 } = obj;
+
+console.log(a1);
+//console.log(a);
+
+//Assignment Pattern
+let b;
+({ b: b } = obj);
 console.log(b);

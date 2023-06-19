@@ -3,9 +3,14 @@ const fruits = [
   'Mango',
   'Kiwi',
   'Berry',
+  'banana',
+  'lichi',
 ];
 
-const [x, y, ...z] = fruits;
+//Binding Pattern
 
-console.log(x, y);
-console.log(z);
+// const [a, , , k] = fruits;
+// console.log(a, k);
+
+const [a, m, ...[, be, ba]] = fruits;
+console.log(ba);
